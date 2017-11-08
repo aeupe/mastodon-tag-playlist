@@ -1,0 +1,31 @@
+body {
+	background-color: #282c37 !important;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.card {
+	max-width: 640px;
+	background-color: #444b5d;
+	color: #fff;
+}
+
+form {
+	margin-bottom: 0;
+}
+
+button {
+	background-color: #49a0de !important;
+}
+
+#github-logo {
+	position: absolute;
+	right: 10px;
+	top: -46px;
+	opacity: .4;
+}

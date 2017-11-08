@@ -1,0 +1,26 @@
+{
+  "name": "mastodon-tag-playlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeupe/mastodon-tag-playlist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeupe/mastodon-tag-playlist/issues"
+  },
+  "homepage": "https://github.com/aeupe/mastodon-tag-playlist#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "js-video-url-parser": "^0.2.4",
+    "mastodon-api": "^1.3.0"
+  }
+}

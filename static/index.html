@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="row card">
+			<form class="col s12 card-content">
+				<div class="col s12 card-title">
+					mastodon-tag-playlist
+					<a id="github-logo" href="https://github.com/aeupe/mastodon-tag-playlist">
+						<img src="GitHub-Mark-Light-32px.png" />
+					</a>
+				</div>
+				<div class="input-field col s12">
+					<input class="validate valid" value="mastodon.social" type="text" placeholder="mastodon.social" id="instance" required>
+					<label class="active" for="instance">Instance</label>
+				</div>
+<!--
+				<div class="input-field col s12">
+					<input type="text" placeholder="xxxxxxxxxx" id="token">
+					<label for="token">Access token</label>
+				</div>
+-->
+				<div class="input-field col s12">
+					<input class="validate valid" value="tootradio" type="text" placeholder="tootradio" id="tag" required>
+					<label class="active" for="tag">Tag</label>
+				</div>
+				<div class="input-field col s6">
+					<input class="validate valid" value="2" type="text" pattern="\d*" placeholder="4" id="pages" required>
+					<label class="active" for="pages">Pages</label>
+				</div>
+				<div class="input-field col s6">
+					<input class="validate valid" value="0" type="text" pattern="\d*" placeholder="0" id="offset" required>
+					<label class="active" for="offset">Offset</label>
+				</div>
+				<button type="submit" class="col s12 btn waves-effect waves-light" id="submit">
+					Open
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
