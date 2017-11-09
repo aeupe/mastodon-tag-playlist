@@ -1,11 +1,13 @@
 $(function(){
 	$('form').submit(function(e){
-		location.href = "/" +
+		var url = "/" +
 			$('#instance').val() + '/' +
-//			$('#token').val() + '_/' +
 			$('#tag').val() + '/' +
 			$('#pages').val() + '/' +
 			$('#offset').val();
+		if ( $('#new_tab:checked').length ) {
+			window.open(url);
+		} else location.href = url;
 		e.preventDefault();
 	});
 	Materialize.updateTextFields();
