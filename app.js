@@ -18,7 +18,7 @@ app.get('/:instance/:tag/:pages/:offset', (req,res)=>{
 	if ( isNaN(req.params.pages) ) req.params.pages = 1
 	else req.params.pages = Math.min(req.params.pages, max_pages)
 	var M = new Mastodon({
-  		access_token: '0',//req.params.token,
+  		access_token: '0',
   		timeout_ms: 60*1000,
   		api_url: 'https://' + req.params.instance + '/api/v1/'
 	})
