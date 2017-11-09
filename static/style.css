@@ -9,8 +9,15 @@ body {
 	box-sizing: border-box;
 }
 
-.card {
+#wrapper {
 	max-width: 640px;
+}
+
+#wrapper > :not(.card) {
+	height: 32px;
+}
+
+.card {
 	background-color: #444b5d;
 	color: #fff;
 }
@@ -24,8 +31,5 @@ button {
 }
 
 #github-logo {
-	position: absolute;
-	right: 10px;
-	top: -46px;
 	opacity: .4;
 }
