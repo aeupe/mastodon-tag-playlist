@@ -7,10 +7,10 @@ body {
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	flex-flow: row wrap;
 }
 
 #wrapper {
+	margin: auto;
 	max-width: 640px;
 }
 
