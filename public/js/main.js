@@ -11,7 +11,7 @@ window.mastoSearch = function(instance, tag, pages, offset, done, fail, always){
 		'/api/v1/timelines/tag/' + tag +
 		'?limit=40'
 	function get(){
-		$.ajax(max_id ? url + '&' + max_id : url).done(toots=>{
+		$.ajax(max_id ? url + '&max_id=' + max_id : url).done(toots=>{
 			toots.forEach(toot=>{
 				if ( ids.length >= max_ids ) return
 				if ( i >= offset ) {
