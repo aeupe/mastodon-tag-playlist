@@ -1,13 +1,18 @@
 $(function(){
 	$('form').submit(function(e){
-		var url = "/" +
+		$('.progress').removeClass('hidden');
+		var route = "/" +
 			$('#instance').val() + '/' +
 			$('#tag').val() + '/' +
 			$('#pages').val() + '/' +
 			$('#offset').val();
-		if ( $('#new_tab:checked').length ) {
-			window.open(url);
-		} else location.href = url;
+		$.get(route).done(function(url){
+			if ( $('#new_tab:checked').length ) {
+				window.open(url);
+			} else location.href = url;
+		}).always(function(){
+			$('.progress').addClass('hidden');
+		})
 		e.preventDefault();
 	});
 	Materialize.updateTextFields();
