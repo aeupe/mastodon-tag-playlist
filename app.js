@@ -18,7 +18,7 @@ app.get('/:instance/:tag/:pages(\\d\\d?)/:offset(\\d\\d?)', (req,res)=>{
 				'/api/v1/timelines/tag/' + req.params.tag +
 				'?limit=40'
 	function get(){
-		request.get(max_id ? url + '&' + max_id : url, (err,_res,body)=>{
+		request.get(max_id ? url + '&max_id=' + max_id : url, (err,_res,body)=>{
 			if ( err || _res.statusCode != 200 ) res.sendStatus(500)
 			else {
 				let toots = JSON.parse(body)
