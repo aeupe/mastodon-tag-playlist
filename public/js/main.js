@@ -3,7 +3,7 @@ const	urlParser = require('js-video-url-parser'),
 		max_offset = 25,
 		max_pages = 25
 
-window.mastoSearch = function(instance, tag, pages, offset, done, always){
+window.mastoSearch = function(instance, tag, pages, offset, done, fail, always){
 	offset = Math.min(offset, max_offset)
 	pages = Math.min(pages, max_pages)
 	let i=0, max_id, ids=[], 
@@ -29,7 +29,7 @@ window.mastoSearch = function(instance, tag, pages, offset, done, always){
 				let yt_url = 'http://www.youtube.com/watch_videos?video_ids=' + ids.join(',')
 				done(yt_url)
 			} else get()
-		}).always(always)
+		}).fail(fail).always(always)
 	}
 	get()
 }
