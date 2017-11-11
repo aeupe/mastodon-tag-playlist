@@ -10,6 +10,8 @@ $(function(){
 			if ( $('#new_tab:checked').length ) {
 				window.open(url);
 			} else location.href = url;
+		}).fail(function(){
+			Materialize.toast('Error', 1000);
 		}).always(function(){
 			$('.progress').addClass('hidden');
 		})
