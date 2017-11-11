@@ -10,9 +10,12 @@ $(()=>{
 				if ( $('#new_tab:checked').length ) {
 					window.open(url)
 				} else location.href = url
+				$('.progress').addClass('hidden')
 			}, 
-			()=>{Materialize.toast('Error', 1000)},
-			()=>{$('.progress').addClass('hidden')}
+			()=>{
+				Materialize.toast('Error', 1000)
+				$('.progress').addClass('hidden')
+			}
 		)
 		e.preventDefault()
 	})
