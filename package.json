@@ -18,9 +18,22 @@
   },
   "homepage": "https://github.com/aeupe/mastodon-tag-playlist#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
+    "js-video-url-parser": "^0.2.4"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "express": "^4.16.2",
-    "js-video-url-parser": "^0.2.4",
-    "request": "^2.83.0"
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.1.0"
   }
 }

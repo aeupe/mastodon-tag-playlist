@@ -34,3 +34,18 @@ button {
 #github-logo {
 	opacity: .4;
 }
+
+.progress {
+	position: fixed;
+	top: 0;
+	margin-top: 0;
+	background-color: transparent;
+}
+
+.progress > .indeterminate {
+	background-color: #49a0de;
+}
+
+.hidden {
+	display: none;
+}
