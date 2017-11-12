@@ -26,7 +26,10 @@ window.mastoSearch = function(instance, tag, pages, offset, done, fail){
 				max_id = toot.id
 			})
 			if ( ids.length >= max_ids || ++i >= offset + pages || !toots.length ) {
-				let yt_url = 'http://www.youtube.com/watch_videos?video_ids=' + ids.join(',')
+				let yt_url;
+				if ( ids.length ) {
+					yt_url = 'http://www.youtube.com/watch_videos?video_ids=' + ids.join(',')
+				}
 				done(yt_url)
 			} else get()
 		}).fail(fail)
