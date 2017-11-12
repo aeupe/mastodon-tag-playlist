@@ -40,10 +40,10 @@ app.get('/:instance/:tag/:pages(\\d\\d?)/:offset(\\d\\d?)', (req,res)=>{
 				if ( ids.length >= max_ids || 
 						++i >= req.params.offset + req.params.pages || 
 						!toots.length ) {
-					res.send(
-						'http://www.youtube.com/watch_videos?video_ids=' + 
-						ids.join(',')
-					)
+					let yt_url = ids.length ? 
+						'http://www.youtube.com/watch_videos?video_ids=' + ids.join(',') :
+						''
+					res.send(yt_url)
 				} else get()
 			}
 		})
