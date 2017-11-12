@@ -1,6 +1,7 @@
 $(function(){
 	$('form').submit(function(e){
 		$('.progress').removeClass('hidden');
+		var new_tab = $('#new_tab:checked').length;
 		var route = "/" +
 			$('#instance').val() + '/' +
 			$('#tag').val() + '/' +
@@ -8,9 +9,8 @@ $(function(){
 			$('#offset').val();
 		$.get(route).done(function(url){
 			if ( url ) {
-				if ( $('#new_tab:checked').length ) {
-					window.open(url);
-				} else location.href = url;
+				if ( new_tab ) window.open(url);
+				else location.href = url;
 			} else Materialize.toast('Couldn\'t find any content', 1000);
 		}).fail(function(){
 			Materialize.toast('Error', 1000);
