@@ -15,7 +15,7 @@ window.mastoSearch = function(instance, tag, pages, offset, done, fail){
 			toots.forEach(toot=>{
 				if ( ids.length >= max_ids ) return
 				if ( i >= offset ) {
-					$(toot.content).find('a').each((i,e)=>{
+					$($.parseHTML(toot.content)).find('a').each((i,e)=>{
 						let href = $(e).attr('href'), o = urlParser.parse(href)
 						if ( o && o.provider == 'youtube' && 
 								o.id && ids.length < max_ids ) {
