@@ -1,2 +1,2 @@
 # mastodon-tag-playlist
-[/public](public)
+https://aeupe.github.io/mastodon-tag-playlist/public/
