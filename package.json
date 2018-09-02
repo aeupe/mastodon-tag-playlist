@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/aeupe/mastodon-tag-playlist.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "aeupe",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aeupe/mastodon-tag-playlist/issues"
   },
